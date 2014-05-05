@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <style>
+            li {
+                list-style: none;
+            }
+
+            .done label {
+                color: #a9a9a9;
+                text-decoration: line-through;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <ul>
+                <li v-repeat="items" v-class="done: checked">
+                    <input type="checkbox" v-model="checked"></input><label>{{name}}</label>
+                </li>
+            </ul>
+        </div>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/0.10.3/vue.js"></script>
+        <script src="./main.js"></script>
+    </body>
+</html>
